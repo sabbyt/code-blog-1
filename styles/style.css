@@ -1,0 +1,45 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  text-align: center;
+}
+
+main {
+  margin: 0 auto;
+  width: 900px;
+}
+
+article:first-child {
+  display: none;
+}
+
+article {
+  padding: 25px;
+  background-color: #EFEFEF;
+  margin-bottom: 25px;
+}
+
+img:first-child {
+  clear: left;
+  width: 300px;
+  float: left;
+  margin: 10px 10px 10px 0;
+}
+
+img:nth-child(2) {
+  width: 300px;
+  float: right;
+  margin: 10px 0 10px 10px;
+}
+
+h5 {
+  clear: both;
+}
+
+@media (max-width: 900px) {
+  main {
+    width: 100%;
+  }
+}

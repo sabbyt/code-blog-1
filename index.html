@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      My Blog
+    </title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link href="styles/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to My Blog</h1>
+      <nav>
+        <ul>
+          <li class="tab" data-content="articles"><a href="#"></a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <form class="searchArticles">
+      <span>Search Posts By Author:</span>
+      <select class="artAuth">
+      </select>
+      <span>Search Posts By Category:</span>
+      <select class="artCat">
+      </select>
+      <noscript><input type="submit" value="Submit"></noscript>
+    </form>
+
+    <section class="section1">
+      <main>
+        <article id="articlePost">
+          <h1 id="title"></h1>
+          <h3 id="authorDate"></h3>
+          <div id="bodyText"></div>
+          <h5 id="category"></h5>
+        </article>
+      </main>
+    </section>
+
+    <section class="section2">
+    </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="scripts/blog.js"></script>
+  <script src="scripts/blogArticles.js"></script>
+  <script src="scripts/articles.js"></script>
+  <script src="scripts/minimizeArticles.js"></script>
+  <script src="scripts/filterArticles.js"></script>
+  </body>
+</html>
