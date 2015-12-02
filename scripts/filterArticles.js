@@ -15,8 +15,23 @@ Articles.prototype.searchArticles = function() {
 };
 
 blog.filterArticles = function() {
-  $('select').change(function(){
-    console.log(this.value);
+  $('.artAuth').change(function(){
+    $('article').show();
+    var authArray = $('article').toArray();
+    for (var i = 0; i < authArray.length; i++ ) {
+      if ($(authArray[i]).data('author') !== this.value ) {
+        $(authArray[i]).hide();
+      };
+    };
+  });
+  $('.artCat').change(function(){
+    $('article').show();
+    var catArray = $('article').toArray();
+    for (var i = 0; i < catArray.length; i++ ) {
+      if ($(catArray[i]).data('category') !== this.value ) {
+        $(catArray[i]).hide();
+      };
+    };
   });
 };
 

@@ -32,19 +32,14 @@ blog.sortRawData = function() {
   });
 };
 
-// Articles.prototype.postDate = function() {
-//   var dateMath = new Date() - this.publishedOn;
-//   dateDiff = dateMath/1000/60/60/24;
-// };
-
 Articles.prototype.toHTML = function() {
   var dateMath = new Date() - new Date(this.publishedOn);
   var dateDiff = dateMath/1000/60/60/24;
-  var $article = $('article:first-child').clone();
-  $article.find('#title').html(this.title);
-  $article.find('#authorDate').html('By <a href="' + this.authorUrl + '">' + this.author + '</a>, published about ' + Math.ceil(dateDiff) + ' days ago.');
-  $article.find('#bodyText').html(this.body + '<a href="#" class="read-on">Read On</a>');
-  $article.find('#category').html('Category(s): <a href="#">' + this.category + '</a>');
+  var $article = $('article:first-child').clone().removeAttr('id').data('author', this.author).data('category', this.category);
+  $article.find('#title').html(this.title).removeAttr('id');
+  $article.find('#authorDate').html('By <a href="' + this.authorUrl + '">' + this.author + '</a>, published about ' + Math.ceil(dateDiff) + ' days ago.').removeAttr('id');
+  $article.find('#bodyText').html(this.body + '<a href="#" class="read-on">Read On</a>').removeAttr('id');
+  $article.find('#category').html('Category(s): <a href="#">' + this.category + '</a>').removeAttr('id');
   return $article;
 };
 
