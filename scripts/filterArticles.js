@@ -2,37 +2,50 @@ var authorArray = [];
 var categoryArray = [];
 
 Articles.prototype.searchArticles = function() {
-  var artAuth = this.author;
-  var artCat = this.category;
   if ($.inArray(this.author, authorArray) === -1) {
     $('.artAuth').append('<option>' + this.author + '</option>');
-    authorArray.push(artAuth);
+    authorArray.push(this.author);
   };
   if ($.inArray(this.category, categoryArray) === -1) {
     $('.artCat').append('<option>' + this.category + '</option>');
-    categoryArray.push(artCat);
+    categoryArray.push(this.category);
   };
 };
 
 blog.filterArticles = function() {
   $('.artAuth').change(function(){
-    $('article').show();
-    var authArray = $('article').toArray();
-    for (var i = 0; i < authArray.length; i++ ) {
-      if ($(authArray[i]).data('author') !== this.value ) {
-        $(authArray[i]).hide();
+    $('.artCat').find('option:first').attr('selected', 'selected');
+    $('article:not(:first)').show();
+    if (this.value !== 'none') {
+      var authArray = $('article').toArray();
+      for (var i = 0; i < authArray.length; i++ ) {
+        if ($(authArray[i]).data('author') !== this.value ) {
+          $(authArray[i]).hide();
+        };
       };
     };
+    if ($('.burger').css('display') !== 'none') {
+      $('nav').slideUp(100);
+    };
   });
+
   $('.artCat').change(function(){
-    $('article').show();
-    var catArray = $('article').toArray();
-    for (var i = 0; i < catArray.length; i++ ) {
-      if ($(catArray[i]).data('category') !== this.value ) {
-        $(catArray[i]).hide();
+    $('.artAuth').find('option:first').attr('selected', 'selected');
+    $('article:not(:first)').show();
+    if (this.value !== 'none') {
+      var catArray = $('article').toArray();
+      for (var i = 0; i < catArray.length; i++ ) {
+        if ($(catArray[i]).data('category') !== this.value ) {
+          $(catArray[i]).hide();
+        };
       };
+    };
+    if ($('.burger').css('display') !== 'none') {
+      $('nav').slideUp(100);
     };
   });
 };
+
+//.postCategor:not(:contains())
 
 blog.filterArticles();
