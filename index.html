@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
       My Blog
     </title>
@@ -8,39 +9,58 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href="styles/style.css" rel="stylesheet">
   </head>
+
   <body>
+
     <header>
-      <h1>Welcome to My Blog</h1>
+      <div class="hamburgTitle">
+        <span class="hamburger"><i class="fa fa-2x fa-bars"></i></span>
+        <h1>The Code Blog</h1>
+      </div>
+
       <nav>
         <ul>
-          <li class="tab" data-content="articles"><a href="#"></a></li>
+          <li class="tab"><i class="fa fa-home"></i><span>Home</span></li>
+          <li class="tab"><i class="fa fa-book"></i><span>About Me</span></li>
+          <li><a href="https://github.com/setheid"><i class="fa fa-github"></i>GitHub</a></li>
         </ul>
+
+        <div class="divideLine"></div>
+
+        <div class="searchForm">
+          <form class="searchArticles">
+            <select class="artAuth">
+              <option value="none">-- Filter by Author --</option>
+            </select>
+            <select class="artCat">
+              <option value="none">-- Filter by Category --</option>
+            </select>
+            <noscript><input type="submit" value="Submit"></noscript>
+          </form>
+        </div>
       </nav>
     </header>
 
-    <form class="searchArticles">
-      <span>Search Posts By Author:</span>
-      <select class="artAuth">
-      </select>
-      <span>Search Posts By Category:</span>
-      <select class="artCat">
-      </select>
-      <noscript><input type="submit" value="Submit"></noscript>
-    </form>
+    <div class="mainBody">
+      <section class="active">
+        <main>
+          <article id="articlePost">
+            <h1 id="title"></h1>
+            <h4 id="authorDate"></h4>
+            <div id="bodyText"></div>
+            <h5 id="category"></h5>
+          </article>
+        </main>
+      </section>
 
-    <section class="section1">
-      <main>
-        <article id="articlePost">
-          <h1 id="title"></h1>
-          <h3 id="authorDate"></h3>
-          <div id="bodyText"></div>
-          <h5 id="category"></h5>
-        </article>
-      </main>
-    </section>
-
-    <section class="section2">
-    </section>
+      <section>
+        <div class="aboutMe">
+          <h1 class="aboutTitle">About Me</h1>
+          <p class="aboutBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis interdum purus vel venenatis vehicula. Aenean porta, justo nec mollis scelerisque, massa arcu commodo diam, tristique laoreet nibh eros vel nunc. Quisque sapien purus, hendrerit eu ullamcorper a, commodo in dui. Vestibulum a ex in felis rhoncus fringilla et ut tellus. Pellentesque lobortis elit eu sem efficitur imperdiet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed porta tincidunt tortor, eleifend sodales risus consectetur a. Nulla tincidunt, ex in laoreet convallis, felis sapien sodales erat, non laoreet ipsum diam in ante. Nullam posuere tempus nunc et volutpat. Quisque ornare lacinia magna ut viverra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+          <br/><br/>Cras laoreet non arcu vitae hendrerit. Aliquam arcu urna, malesuada quis convallis ac, interdum ullamcorper arcu. Aenean ornare tincidunt commodo. In hac habitasse platea dictumst. Donec vestibulum tellus ac mollis vulputate. Donec magna tortor, dictum eget dolor vitae, euismod aliquet sem. Nullam commodo, quam a fringilla vehicula, libero dui tincidunt elit, pellentesque porttitor dolor eros sollicitudin augue. Sed scelerisque malesuada metus eget dignissim. Suspendisse potenti. Praesent efficitur rutrum massa, quis laoreet lorem pharetra quis. Vivamus quam arcu, laoreet a semper at, tincidunt at tellus. Maecenas vulputate dictum nisl, pulvinar ornare magna facilisis lacinia. Pellentesque vitae sapien sed nulla fringilla consectetur at non risus.</p>
+        </div>
+      </section>
+    </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="scripts/blog.js"></script>
@@ -48,5 +68,6 @@
   <script src="scripts/articles.js"></script>
   <script src="scripts/minimizeArticles.js"></script>
   <script src="scripts/filterArticles.js"></script>
+  <script src="scripts/tabs.js"></script>
   </body>
 </html>

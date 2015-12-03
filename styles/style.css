@@ -1,24 +1,118 @@
+/*************** Main Page Layout **************/
+
 body {
   font-family: "Open Sans", sans-serif;
+  background-color: white;
+  margin: 0;
 }
 
 header {
-  text-align: center;
+  color: white;
+  background-color: black;
+  padding: 0;
 }
 
-main {
-  margin: 0 auto;
-  width: 900px;
+a {
+  color: #716D6D;
 }
 
 article:first-child {
   display: none;
 }
 
+/******************** Nav *******************/
+
+header h1 {
+  display: inline-block;
+  margin: 0;
+  padding: 1em 0.25em;
+}
+
+.hamburger {
+  display: inline-block;
+  margin: 0 0.25em 0 1em;
+  cursor: pointer;
+}
+
+nav {
+  position: absolute;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.85);;
+  margin: 0 auto;
+  border: solid gray 2px;
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  display: block;
+  text-transform: uppercase;
+  text-align: left;
+  margin: 1em;
+  color: white;
+  cursor: pointer;
+}
+
+nav li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav li a:hover {
+  color: #F51F6A;
+}
+
+nav li:hover {
+  color: #F51F6A;
+}
+
+li .fa {
+  margin-right: 0.5em;
+}
+
+.divideLine {
+  margin: 0 auto;
+  border-bottom: solid gray 1px;
+  width: 80%;
+}
+
+select {
+  display: block;
+  margin: 1em;
+  width: 150px;
+}
+
+/***************** Main Content *************/
+
+/***************** Section 1 *************/
+
+article h1 {
+  color: black;
+}
+
+section {
+  display: none;
+  clear: both;
+}
+
+section.active {
+  display: block;
+}
+
+main {
+  margin: 0 auto;
+  width: 100%;
+}
+
 article {
-  padding: 25px;
-  background-color: #EFEFEF;
-  margin-bottom: 25px;
+  padding: 2em;
+  background-color: #FBFBFB;
+  margin: 0.5em 0.5em 2em;
+  border: solid #D8D8D8 1px;
 }
 
 img:first-child {
@@ -38,8 +132,17 @@ h5 {
   clear: both;
 }
 
-@media (max-width: 900px) {
-  main {
-    width: 100%;
-  }
+/***************** Section 2 *************/
+
+.aboutMe {
+  padding: 2em;
+  background-color: #FBFBFB;
+  margin-bottom: 2em;
+  border: solid #D8D8D8 1px;
+}
+
+/***************** Media Queries *************/
+
+@media (min-width: 450px) {
+
 }
