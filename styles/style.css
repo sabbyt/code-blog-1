@@ -3,7 +3,8 @@
 body {
   font-family: "Open Sans", sans-serif;
   background-color: white;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 header {
@@ -34,7 +35,7 @@ header h1 {
   cursor: pointer;
 }
 
-nav {
+nav.navigation {
   position: absolute;
   display: none;
   background-color: rgba(0, 0, 0, 0.85);;
@@ -43,12 +44,12 @@ nav {
   z-index: 100;
 }
 
-nav ul {
+nav.navigation ul {
   list-style: none;
   padding: 0;
 }
 
-nav li {
+nav.navigation li {
   display: block;
   text-transform: uppercase;
   text-align: left;
@@ -57,16 +58,16 @@ nav li {
   cursor: pointer;
 }
 
-nav li a {
+nav.navigation li a {
   text-decoration: none;
   color: white;
 }
 
-nav li a:hover {
+nav.navigation li a:hover {
   color: #F51F6A;
 }
 
-nav li:hover {
+nav.navigation li:hover {
   color: #F51F6A;
 }
 
@@ -143,6 +144,27 @@ h5 {
 
 /***************** Media Queries *************/
 
-@media (min-width: 450px) {
+@media (min-width: 600px) {
+  nav.navigation {
+    position: relative;
+    display: block;
+    border: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  header {
+    text-align: center;
+  }
+
+  nav.navigation ul li {
+    display: inline-block;
+  }
+
+  nav.navigation select {
+    display: inline;
+  }
 
 }

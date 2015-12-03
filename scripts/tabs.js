@@ -9,6 +9,9 @@ blog.tabNav = function() {
     $('section').removeClass('active');
     var $tabIndex = $(this).index();
     $('.mainBody').find('section:nth-child(' + ($tabIndex + 1) + ')').addClass('active');
+    if ($('.burger').css('display') !== 'none') {
+      $('nav').slideUp(100);
+    };
   });
 };
 
