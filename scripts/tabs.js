@@ -15,7 +15,19 @@ blog.tabNav = function() {
   });
 };
 
+blog.resized = function() {
+  $(window).resize(function() {
+    if (window.innerWidth >= 600) {
+      $('nav.navigation').css('display', 'block');
+    };
+    if (window.innerWidth <= 600) {
+      $('nav.navigation').css('display', 'none');
+    };
+  });
+};
+
 $(function() {
   blog.dropDown();
   blog.tabNav();
+  blog.resized();
 });
