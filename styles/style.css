@@ -84,7 +84,7 @@ li .fa {
 select {
   display: block;
   margin: 1em;
-  width: 150px;
+  width: 175px;
 }
 
 /***************** Main Content *************/
@@ -138,8 +138,16 @@ h5 {
 .aboutMe {
   padding: 2em;
   background-color: #FBFBFB;
-  margin-bottom: 2em;
+  margin: 0.5em 0.5em 2em;
   border: solid #D8D8D8 1px;
+}
+
+/***************** Footer *************/
+
+footer {
+  padding: 1em;
+  background-color: black;
+  color: white;
 }
 
 /***************** Media Queries *************/

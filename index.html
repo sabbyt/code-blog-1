@@ -12,14 +12,14 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
     <script id="entry-template" type="text/x-handlebars-template">
-        <article data-author="{{author}}" data-category="{{category}}">
+        <article class="articlePost" data-author="{{author}}" data-category="{{category}}">
           <h1 class="title">{{title}}</h1>
           <h4 class="authorDate">By <a href="{{authorUrl}}">{{author}}</a><br/>Published about {{daysAgo}} days ago.</h4>
           <div class="bodyText">
             {{{body}}}
-            <a class="read-on">Read On</a>
+            <a href="#" class="read-on">Read On</a>
           </div>
-          <h5 class="category">{{category}}</h5>
+          <h5 class="category">Category(s): {{category}}</h5>
         </article>
     </script>
 
@@ -72,7 +72,7 @@
         </div>
       </section>
     </div>
-    <footer>This is the footer</footer>
+    <footer>Copyright (c) 2015 Copyright Holder All Rights Reserved.</footer>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- <script src="scripts/test.js"></script> -->

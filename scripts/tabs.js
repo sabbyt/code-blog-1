@@ -13,6 +13,8 @@ blog.tabNav = function() {
 
     if ($tabIndex === 0) {
       $('article').show();
+      // $('.artCat').find('option:first').attr('selected', 'selected');
+      // $('.artAuth').find('option:first').attr('selected', 'selected');
     }
 
     if ($('.hamburger').css('display') !== 'none') {
