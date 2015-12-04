@@ -3,11 +3,26 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-      My Blog
+      Code Blog
     </title>
+    <link href="normalize/normalize.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href="styles/style.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <script id="entry-template" type="text/x-handlebars-template">
+        <article data-author="{{author}}" data-category="{{category}}">
+          <h1 class="title">{{title}}</h1>
+          <h4 class="authorDate">By <a href="{{authorUrl}}">{{author}}</a><br/>Published about {{daysAgo}} days ago.</h4>
+          <div class="bodyText">
+            {{{body}}}
+            <a class="read-on">Read On</a>
+          </div>
+          <h5 class="category">{{category}}</h5>
+        </article>
+    </script>
+
   </head>
 
   <body>
@@ -41,15 +56,11 @@
       </nav>
     </header>
 
+    <div class="test"></div>
+
     <div class="mainBody">
       <section class="active">
         <main>
-          <article id="articlePost">
-            <h1 id="title"></h1>
-            <h4 id="authorDate"></h4>
-            <div id="bodyText"></div>
-            <h5 id="category"></h5>
-          </article>
         </main>
       </section>
 
@@ -61,13 +72,16 @@
         </div>
       </section>
     </div>
+    <footer>This is the footer</footer>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- <script src="scripts/test.js"></script> -->
   <script src="scripts/blog.js"></script>
   <script src="scripts/blogArticles.js"></script>
   <script src="scripts/articles.js"></script>
   <script src="scripts/minimizeArticles.js"></script>
   <script src="scripts/filterArticles.js"></script>
   <script src="scripts/tabs.js"></script>
+  <script src="scripts/index.js"></script>
   </body>
 </html>
