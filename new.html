@@ -1,1 +1,61 @@
-hello
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      Code Blog
+    </title>
+    <link href="vendor/normalize/normalize.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/new.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.js"></script>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="hamburgTitle">
+        <span class="hamburger"><i class="fa fa-2x fa-bars"></i></span>
+        <h1>The Code Blog</h1>
+      </div>
+    </header>
+    <section id="write" class="tab-content active">
+      <h1>New Article</h1>
+      <form>
+        <label>
+          <input type="text" id="article-title" placeholder="Article Title" required>
+        </label>
+        <textarea id="article-body" rows="8" cols="40" required></textarea>
+        <label>
+          <input type="text" id="article-author" placeholder="Author Name" required>
+        </label>
+        <label>
+          <input type="text" id="article-author-url" placeholder="Author's URL" required>
+        </label>
+        <label>
+          <input type="text" id="article-category" placeholder="Category" required>
+        </label>
+        <label>
+          <input type="checkbox" id="article-published"> Published
+        </label>
+      </form>
+    </section>
+
+    <section id="articles" class="tab-content active">
+    </section>
+
+    <section id="article-export" class="active">
+      <label id="export-field" for="article-json">
+        <input type="text" readonly id="article-json">
+      </label>
+    </section>
+
+    <footer>Copyright (c) 2015 Copyright Holder All Rights Reserved.</footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="scripts/articlePreview.js"></script>
+  <!-- <script src="scripts/test.js"></script> -->
+  </body>
+</html>
