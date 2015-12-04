@@ -7,11 +7,17 @@ blog.dropDown = function() {
 blog.tabNav = function() {
   $('.tab').on('click', function(){
     $('section').removeClass('active');
+
     var $tabIndex = $(this).index();
     $('.mainBody').find('section:nth-child(' + ($tabIndex + 1) + ')').addClass('active');
-    if ($('.burger').css('display') !== 'none') {
+
+    if ($tabIndex === 0) {
+      $('article').show();
+    }
+
+    if ($('.hamburger').css('display') !== 'none') {
       $('nav').slideUp(100);
-    };
+    }
   });
 };
 
@@ -25,9 +31,3 @@ blog.resized = function() {
     };
   });
 };
-
-$(function() {
-  blog.dropDown();
-  blog.tabNav();
-  blog.resized();
-});
